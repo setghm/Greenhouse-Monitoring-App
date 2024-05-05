@@ -15,6 +15,10 @@ The app monitors these sensors:
 
 
 
+https://github.com/setghm/Greenhouse-Monitoring-App/assets/53455269/61f4b586-9c69-42a9-b64a-f448f0c6f133
+
+
+
 ##### Powered by
 
 [<img src="https://cordova.apache.org/static/img/artwork/cordova_logo_normal_dark_large.png" alt="Apache Cordova" width="200px">](https://cordova.apache.org)
