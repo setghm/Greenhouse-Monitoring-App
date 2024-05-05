@@ -1,0 +1,148 @@
+<!-- Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <title>Luz ambiental</title>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="../css/app.css">
+		<link rel="stylesheet" href="../css/indicators.css">
+		<link rel="stylesheet" href="../css/luz-ambiental.css">
+    </head>
+	<body>
+		<div class="app-view">
+			<div class="app-statusbar"></div>
+			<div class="view-head">
+				<div class="back-button">
+					<div class="back-icon"></div>
+					<div class="back-text">Volver</div>
+				</div>
+			</div>
+		
+			<div class="view-body">
+				<div class="view-section">
+					<div class="section-title">Luz ambiental</div>
+					<div class="sun-indicator" id="al-indicator">
+						<div class="number">
+							<div class="value">0</div>
+							<div class="units">%</div>
+						</div>
+						<div class="sun">
+							<div class="sun-glow"></div>
+							<div class="sun-black"></div>
+							<div class="sun-yellow"></div>
+						</div>
+					</div>
+				</div>
+				<div class="view-section hours-average">
+					<div class="section-title">Promedio de las últimas horas</div>
+					<div class="section-bottom">
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">7 P.M.</div>
+						</div>
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">6 P.M.</div>
+						</div>
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">5 P.M.</div>
+						</div>
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">4 P.M.</div>
+						</div>
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">3 P.M.</div>
+						</div>
+						<div class="card hour-average p10">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">%</div>
+							</div>
+							<div class="hour">2 P.M.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script src="../js/app.js"></script>
+		<script>
+
+			function format12Hours(hour) {
+				let s = ' A.M.'
+				
+				if (hour > 12) {
+					hour -= 12
+					s = ' P.M.'
+				}
+
+				return hour + s
+			}
+
+			function updateLastHours() {
+				const date = new Date()
+				let hour = date.getHours()
+	
+				document.querySelectorAll('.hour-average').forEach((card, i) => {
+					const text = card.querySelector('.hour')
+					text.textContent = format12Hours(hour)
+
+					getAmbientalLightHourAverage(i).then(v => {
+						cardSetAmbientalLight(i+1, v)
+					})
+
+					hour--
+					if (hour < 0 || hour > 24) {
+						hour = 23
+					}
+				})
+			}
+
+			// One time update
+			registerBackButton('.back-button', '../index.html')
+			updateLastHours()
+
+			function continousUpdate() {
+				getLastAmbientalLight().then(data => {
+					sunIndicatorSetValue('al-indicator', data)
+				})
+			}
+
+			setInterval(continousUpdate, UPDATE_TIME)
+			continousUpdate()
+		</script>
+	</body>
+</html>

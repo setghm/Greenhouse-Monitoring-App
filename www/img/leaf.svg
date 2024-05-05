@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg4012"
+   viewBox="0 0 474.16016 335.64668"
+   version="1.1"
+   sodipodi:docname="leaf.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   width="474.16016"
+   height="335.64667">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="0.48805942"
+     inkscape:cx="134.63271"
+     inkscape:cy="121.71992"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4012"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs4014">
+    <filter
+       id="filter5796"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur5798"
+         in="SourceAlpha"
+         stdDeviation="2"
+         result="result0" />
+      <feComposite
+         id="feComposite5800"
+         in="SourceGraphic"
+         in2="result0"
+         k3="10"
+         k2="1"
+         k1="0"
+         result="result3"
+         k4="0"
+         operator="arithmetic" />
+      <feComposite
+         id="feComposite5802"
+         operator="in"
+         in="result3"
+         in2="result3"
+         result="result4" />
+    </filter>
+  </defs>
+  <path
+     id="rect875"
+     style="fill:#0cf491;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:21.0476;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+     d="m 281.45509,0.0015528 c -36.83754,-0.108922 -70.47273,5.510203 -100.78711,17.5644532 l 9.13281,61.156253 -48.77734,-40.378909 c -23.73,15.76 -44.899464,36.620309 -63.439464,63.07031 l 40.681644,53.41407 -55.855474,-29.51954 c -12.488,21.73 -23.55234,46.48954 -33.152344,74.51954 L 63.619146,234.89804 22.787112,219.81796 C 13.639812,250.10296 6.036,283.84035 0,321.21835 c 38.789996,4.409 74.738536,8.16459 108.01954,10.74219 l -0.61328,-52.33008 35.6289,54.63477 c 39.627,2.0831 75.13608,1.96975 106.83008,-1.43946 l -9.12304,-53.74219 55.30664,45.6543 c 32.079,-8.1796 59.37492,-21.45167 82.41992,-41.51367 l -37.79688,-57.80664 62.02539,32.16406 c 16.826,-21.447 30.78011,-48.1582 42.16211,-81.1582 l -43.63672,-26.89453 50.65821,4.69922 c 9.4361,-32.767 16.77929,-70.975921 22.27929,-115.419926 l -0.002,-0.0078 c -49.3,-17.139 -95.19101,-29.0012972 -137.54101,-34.7792972 L 322.32813,52.41366 307.46876,0.9839748 c -8.84062,-0.626437 -17.5127,-0.957286 -26.01367,-0.982422 z M 377.58204,104.73202 c 9.89719,-0.0283 19.92227,0.33828 30.07617,1.10156 -127.81,3.94 -230.76062,75.01969 -328.390624,160.42969 C 161.8215,160.33062 260.79524,105.06612 377.58204,104.73202 Z" />
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Jungle Leaf</dc:title>
+        <dc:date>2010-09-25T04:25:17</dc:date>
+        <dc:description>Jungle style leaf.</dc:description>
+        <dc:source>http://openclipart.org/detail/86593/jungle-leaf-by-stevepetmonkey</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>stevepetmonkey</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Jungle</rdf:li>
+            <rdf:li>Jungle Leaf</rdf:li>
+            <rdf:li>Leaf</rdf:li>
+            <rdf:li>Palm</rdf:li>
+            <rdf:li>Palm Leaf</rdf:li>
+            <rdf:li>Plant</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

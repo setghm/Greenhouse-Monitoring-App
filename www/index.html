@@ -1,0 +1,173 @@
+<!-- Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Monitoreo del invernadero</title>
+        <meta charset="utf-8">
+        <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <!--meta name="color-scheme" content="light dark"-->
+		<link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/indicators.css">
+    </head>
+    <body>
+        <div class="app">
+			<div class="app-statusbar"></div>
+			<div class="app-head">
+				<a class="round-button head-help">?</a>
+				<div class="head-title">Monitoreo del invernadero</div>
+			</div>
+			<div class="app-body">
+				<div class="card h-card" id="humidity">
+					<div class="card-title">
+						<div class="title-icon h-icon"></div>
+						<div>Humedad</div>
+					</div>
+					<div class="row">
+						<div class="card-mini" id="relative-humidity">
+							<div id="rh-indicator" class="card-mini-indicator circular">
+								<div class="number">
+									<div class="value">0</div>
+									<div class="units">%</div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+									<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+									<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+									<defs>
+										<linearGradient id="progress">
+											<stop offset="0%" stop-color="#0cf491" />
+											<stop offset="100%" stop-color="#00cf76" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="card-mini-title">Relativa</div>
+						</div>
+						<div class="card-mini" id="soil-moisture">
+							<div id="sm-indicator" class="card-mini-indicator circular">
+								<div class="number">
+									<div class="value">0</div>
+									<div class="units">%</div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+									<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+									<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+									<defs>
+										<linearGradient id="progress">
+											<stop offset="0%" stop-color="#0cf491" />
+											<stop offset="100%" stop-color="#00cf76" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="card-mini-title">De la tierra</div>
+						</div>
+					</div>
+				</div>
+				<div class="card row t-card" id="temperature">
+					<div class="card-title">
+						<div class="title-icon t-icon"></div>
+						<div>Temperatura</div>
+					</div>
+					<div id="t-indicator" class="card-mini-indicator circular">
+						<div class="number">
+							<div class="value">0</div>
+							<div class="units">°</div>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+							<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+							<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+							<defs>
+								<linearGradient id="progress">
+									<stop offset="0%" stop-color="#0cf491" />
+									<stop offset="100%" stop-color="#00cf76" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+				<div class="card row am-card" id="ambiental-light">
+					<div class="card-title">
+						<div class="title-icon al-icon"></div>
+						<div>Luz ambiental</div>
+					</div>
+					<div id="al-indicator" class="card-mini-indicator circular">
+						<div class="number">
+							<div class="value">0</div>
+							<div class="units">%</div>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+							<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+							<circle cx="35" cy="35" r="30" stroke-linecap="round"/>
+							<defs>
+								<linearGradient id="progress">
+									<stop offset="0%" stop-color="#0cf491" />
+									<stop offset="100%" stop-color="#00cf76" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="hidden app-info">
+				<div class="app-dialog">
+					<div class="dialog-content">
+						<h1 style="font-size: 16pt; margin-bottom: 10px;">Acerca de ésta aplicación</h1>
+						<p style="margin-bottom: 10px; text-align: justify !important">
+							Aplicación para el monitoreo de los sensores del proyecto del invernadero.
+						</p>
+						<p style="text-align: justify !important">
+							Ésta aplicación se distribuye bajo la <u><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">Licencia Pública General de GNU (GNU GPL), versión 3.0</a></u>.
+						</p>
+					</div>
+					<div class="dialog-actions">
+						<button id="app-info-close">Ok</button>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+        <script src="js/app.js"></script>
+        <script src="cordova.js"></script>
+        <script>
+			registerDialog('.app-info', '.head-help', '#app-info-close')
+
+			registerPageNavigator('#humidity', 'pages/humedad.html')
+			registerPageNavigator('#temperature', 'pages/temperatura.html')
+			registerPageNavigator('#ambiental-light', 'pages/luz-ambiental.html')
+
+			function updateValues() {
+				getLastRelativeHumidity().then((data) => {
+					circularIndicatorSetValue('rh-indicator', data)
+				})
+				getLastSoilMoisture().then(data => {
+					circularIndicatorSetValue('sm-indicator', data)
+				})
+				getLastTemperature().then(data => {
+					circularIndicatorSetValueInRange('t-indicator', data, LOW_TEMPERATURE_LIMIT, HIGH_TEMPERATURE_LIMIT)
+				})
+				getLastAmbientalLight().then(data => {
+					circularIndicatorSetValue('al-indicator', data)
+				})
+			}
+
+			setInterval(updateValues, UPDATE_TIME)
+			updateValues()
+		</script>
+    </body>
+</html>

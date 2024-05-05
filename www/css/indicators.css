@@ -1,0 +1,213 @@
+/* Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+*/
+/*========================== CIRCULAR INDICATOR ==========================*/
+
+.circular-indicator {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-indicator .number {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-indicator .number .value {
+    font-size: 24pt;
+}
+
+.circular-indicator .number .units {
+    font-size: 18pt;
+}
+
+.circular-indicator svg circle {
+    stroke-width: 10px;
+}
+
+.circular-indicator svg circle:nth-child(2) {
+    /*=  (r * 2 * PI)  =*/
+    stroke-dasharray: 439.8;    /* (70 * 2 * PI) = 439.8 */
+    stroke-dashoffset: 439.8;
+}
+
+svg circle:nth-child(1) {
+    stroke: #00cf7640;
+}
+
+svg circle:nth-child(2) {
+    stroke: url(#progress);
+}
+
+/*========================== SMALL CIRCULAR INDICATOR ==========================*/
+
+.card-mini-indicator.circular {
+    width: 70px;
+    height: 70px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-mini-indicator.circular .number {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number .value {
+    font-size: 13pt;
+}
+
+.number .units {
+    font-size: 10pt;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+svg circle {
+    fill: none;
+}
+
+.card-mini-indicator svg circle:nth-child(1) {
+    stroke-width: 6px;
+}
+
+.card-mini-indicator svg circle:nth-child(2) {
+    stroke-width: 6px;
+    /*=  (r * 2 * PI)  =*/
+    stroke-dasharray: 188.5;    /* (30 * 2 * PI) = 188.5 */
+    stroke-dashoffset: 188.5;
+}
+
+/*========================== STATE INDICATOR ==========================*/
+
+.state-indicator {
+    width: 100%;
+}
+
+.state-label {
+    margin-bottom: 10px;
+}
+
+.state-bar {
+    width: 100%;
+    height: 8px;
+    background-size: 100% 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/measure-bar.svg);
+}
+
+.state-arrow {
+    width: 100%;
+    height: 30px;
+    background-size: 24px 30px;
+    background-position-y: 0px;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow-indicator.svg);
+}
+/*========================== SUN INDICATOR ==========================*/
+
+.sun-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.sun-indicator .sun {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    animation: sun-rotation 20s linear infinite;
+}
+
+.sun-indicator .sun > * {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding: 20px;
+}
+
+.sun-indicator .sun .sun-yellow {
+    background-image: url(../img/sun-yellow.png);
+    position: absolute;
+    mix-blend-mode: hard-light;
+    opacity: 0.5;
+}
+
+.sun-indicator .sun .sun-black {
+    background-image: url(../img/sun-black.png);
+    position: absolute;
+    opacity: 0.5;
+}
+
+.sun-indicator .sun .sun-glow {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    /*box-shadow: 0 0 300px yellow,
+                0 0 200px yellow inset;*/
+}
+
+.sun-indicator .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sun-indicator .number .value {
+    font-size: 24pt;
+}
+
+.sun-indicator .number .units {
+    font-size: 16pt;
+}
+
+@keyframes sun-rotation {
+    0% { transform: rotateZ(0deg) }
+    100% { transform: rotateZ(360deg) }
+}

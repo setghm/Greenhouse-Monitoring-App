@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg4189"
+   sodipodi:docname="cloud.svg"
+   inkscape:export-filename="D:\Cliparts\New\cloud.png"
+   viewBox="0 0 151 98"
+   inkscape:export-xdpi="76.224487"
+   version="1.1"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-ydpi="76.224487"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <defs
+     id="defs28" />
+  <title
+     id="title4428">Cloud</title>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="-8"
+     pagecolor="#ffffff"
+     inkscape:showpageshadow="false"
+     width="151px"
+     inkscape:zoom="2.6769043"
+     inkscape:window-x="-8"
+     inkscape:window-height="706"
+     showgrid="false"
+     borderopacity="1.0"
+     inkscape:current-layer="layer1"
+     inkscape:cx="75.5"
+     inkscape:cy="49"
+     inkscape:window-width="1366"
+     inkscape:window-maximized="1"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     inkscape:document-rotation="0" />
+  <g
+     id="layer1"
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     transform="translate(0 -954.36)">
+    <path
+       id="path2844-3"
+       style="fill:#000000;stroke:none"
+       d="M 73.980469 0.013671875 C 57.464897 0.013671875 43.987592 10.346414 43.208984 23.324219 C 30.331299 24.225257 20.195312 33.792105 20.195312 45.470703 C 20.195312 45.991607 20.22205 46.505628 20.261719 47.017578 C 9.3283887 47.107209 0.49414062 55.092573 0.49414062 64.939453 C 0.49414073 74.464812 8.7669232 82.233044 19.203125 82.8125 C 20.657913 87.669796 25.064314 91.208984 30.294922 91.208984 C 33.442709 91.208984 36.284553 89.919035 38.373047 87.839844 C 42.831816 93.931291 50.552473 97.962891 59.337891 97.962891 C 67.027099 97.962891 73.894182 94.87052 78.478516 90.015625 C 81.690794 92.93234 86.240446 94.420628 90.957031 93.640625 L 90.957031 93.638672 C 96.164437 92.777738 100.25845 89.377487 102.11133 84.996094 C 105.7389 86.818303 109.9246 87.863281 114.38867 87.863281 C 128.19667 87.863281 139.39065 77.914625 139.39062 65.640625 C 139.39062 65.237834 139.37025 64.840001 139.34375 64.443359 C 146.06766 60.460302 150.5 53.661027 150.5 45.939453 C 150.5 33.666153 139.30605 23.716797 125.49805 23.716797 C 123.62362 23.716797 121.80318 23.911724 120.04688 24.259766 C 115.90863 19.804629 109.85086 16.820665 103.00195 16.279297 C 98.748662 6.8001564 87.363837 0.013671875 73.980469 0.013671875 z "
+       transform="translate(0,954.36)" />
+  </g>
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>cloud</dc:title>
+        <dc:date>2009-11-12T15:14:40</dc:date>
+        <dc:description />
+        <dc:source>https://openclipart.org/detail/28302/cloud-by-jean_victor_balin-28302</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>jean_victor_balin</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>cloud</rdf:li>
+            <rdf:li>meteo</rdf:li>
+            <rdf:li>nature</rdf:li>
+            <rdf:li>sky</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

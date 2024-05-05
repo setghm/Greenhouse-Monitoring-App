@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.setapps.invernadero" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Monitoreo del invernadero</name>
+    <description>
+        Aplicación para el monitoreo del invernadero.
+    </description>
+    <author email="setghm@gmail.com" href="">
+        Set HM
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="StatusBarBackgroundColor" value="#00000000" />
+    <preference name="NavigationBarBackgroundColor" value="#f0f0f0" />
+    <preference name="NavigationBarLight" value="true" />
+</widget>

@@ -1,0 +1,140 @@
+<!-- Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+-->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <title>Temperatura</title>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+		<link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="../css/indicators.css">
+		<link rel="stylesheet" href="../css/temperatura.css">
+    </head>
+	<body>
+		<div class="app-view">
+			<div class="app-statusbar"></div>
+			<div class="view-head">
+				<div class="back-button">
+					<div class="back-icon"></div>
+					<div class="back-text">Volver</div>
+				</div>
+			</div>
+		
+			<div class="view-body">
+				<div class="view-section temp-indicator">
+					<div class="section-title">Temperatura</div>
+					<div class="circular-indicator" id="t-indicator">
+						<div class="number">
+							<div class="value">0</div>
+							<div class="units">°C</div>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+							<circle cx="80" cy="80" r="70" stroke-linecap="round"/>
+							<circle cx="80" cy="80" r="70" stroke-linecap="round"/>
+							<defs>
+								<linearGradient id="progress">
+									<stop offset="0%" stop-color="#0cf491" />
+									<stop offset="100%" stop-color="#00cf76" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+				<div class="view-section days-register">
+					<div class="section-label">Promedio de los últimos días</div>
+					<div class="section-bottom">
+						<div class="card-mini t-normal" id="two-days-ago">
+							<div class="icon-average"></div>
+							<div class="day-average">
+								<div class="value">0</div>
+								<div class="units">°C</div>
+							</div>
+							<div class="label-average">Jueves</div>
+						</div>
+						<div class="card-mini t-normal" id="yesterday">
+							<div class="icon-average"></div>
+							<div class="day-average">
+								<div class="value">0</div>
+								<div class="units">°C</div>
+							</div>
+							<div class="label-average">Ayer</div>
+						</div>
+						<div class="card-mini t-normal" id="today">
+							<div class="icon-average"></div>
+							<div class="day-average">
+								<div class="value">0</div>
+								<div class="units">°C</div>
+							</div>
+							<div class="label-average" style="font-weight: bold;">Hoy</div>
+						</div>
+					</div>
+				</div>
+				<div class="view-section weekly-average">
+					<div class="card t-normal" id="week-average">
+						<div class="section-label">Última semana</div>
+						<div class="section-right">
+							<div class="average">
+								<div class="value">0</div>
+								<div class="units">°C</div>
+							</div>
+							<div class="average-description">Temperatura adecuada</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script src="../js/app.js"></script>
+		<script>
+			const DAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+			const date = new Date()
+
+			let twoDaysAgo = date.getDay() - 2
+			if (twoDaysAgo < 0) twoDaysAgo += DAYS.length
+
+			// Change two days ago card label
+			const cardTDA = document.querySelector('#two-days-ago')
+			const labelTDA = cardTDA.querySelector('.label-average')
+			labelTDA.textContent = DAYS[twoDaysAgo]
+
+			registerBackButton('.back-button', '../index.html')
+
+			// One time update
+			getTemperatureWeekAverage().then(data => {
+				cardSetTemperature('week-average', data)
+			})
+			getTemperatureTodayAverage().then(data => {
+				miniCardSetTemperature('today', data)
+			})
+			getTemperatureYesterdayAverage().then(data => {
+				miniCardSetTemperature('yesterday', data)
+			})
+			getTemperatureTwoDaysAgoAverage().then(data => {
+				miniCardSetTemperature('two-days-ago', data)
+			})
+
+			function continousUpdate() {
+				getLastTemperature().then(data => {
+					// Get the temperature value
+					circularIndicatorSetValueInRange('t-indicator', data, LOW_TEMPERATURE_LIMIT, HIGH_TEMPERATURE_LIMIT)
+				})
+			}
+
+			setInterval(continousUpdate, UPDATE_TIME)
+			continousUpdate()
+		</script>
+	</body>
+</html>

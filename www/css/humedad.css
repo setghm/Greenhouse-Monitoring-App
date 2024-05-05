@@ -1,0 +1,35 @@
+/* Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+*/
+.view-body {
+    justify-content: space-around !important;
+}
+
+.view-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view-section > *:last-child {
+    margin-bottom: 0;
+}
+
+.view-section > * {
+    margin-bottom: 20px;
+}
+
+.view-section .state-indicator {
+    width: 80%;
+}

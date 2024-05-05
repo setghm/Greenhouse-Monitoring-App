@@ -1,0 +1,124 @@
+/* Copyright (c) 2023 Set HM
+
+    Este archivo es parte de la aplicación de monitoreo del invernadero
+    La aplicación de monitoreo del invernadero es software libre: puedes redistribuirlo y/o modificarlo
+    bajo los términos de la Licencia Pública General de GNU tal como se publica por
+    la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+    cualquier versión posterior.
+    La aplicación de monitoreo del invernadero se distribuye con la esperanza de que sea útil, pero SIN
+    NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+    PARA UN PROPÓSITO PARTICULAR. Ver la Licencia Pública General de GNU para más detalles.
+    Deberías haber recibido una copia de la Licencia Pública General de GNU junto con
+    este programa. Si no, ve http://www.gnu.org/licenses/.
+*/
+.view-body>* {
+	width: 100%;
+	height: 100%;
+}
+
+.view-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hours-average {
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	padding: var(--card-border)
+}
+
+.hours-average .section-title {
+	margin-bottom: var(--card-border);
+}
+
+.hours-average .section-bottom {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 10px;
+	column-gap: 10px;
+}
+
+.card.hour-average {
+	border-radius: 8px;
+	padding: var(--card-border);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hours-average .average {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.hours-average .average .value {
+	font-size: 16pt;
+}
+
+.hours-average .average .units {
+	font-size: 12pt;
+}
+
+.p100 {
+	background: linear-gradient(to bottom, #ffff00, #ffaa00);
+	/* amarillo a amarillo oscuro */
+}
+
+.p90 {
+	background: linear-gradient(to bottom, #e5e5e5, #c9b200);
+	/* gris amarillento a amarillo oscuro */
+}
+
+.p80 {
+	background: linear-gradient(to bottom, #cccccc, #b38f00);
+	/* gris amarillento a amarillo oscuro */
+}
+
+.p70 {
+	background: linear-gradient(to bottom, #b2b2b2, #a67f00);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p60 {
+	background: linear-gradient(to bottom, #999999, #995c00);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p50 {
+	background: linear-gradient(to bottom, #7f7f7f, #7f3d00);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p40 {
+	background: linear-gradient(to bottom, #666666, #662b00);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p30 {
+	background: linear-gradient(to bottom, #4c4c4c, #4c1900);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p20 {
+	background: linear-gradient(to bottom, #333333, #330d00);
+	/* gris amarillento oscuro a amarillo oscuro */
+}
+
+.p10 {
+	background: linear-gradient(to bottom, #1e1e1e, #1e0700);
+	/* negro a negro más oscuro */
+}
+
+.p10 *, .p20 *, .p30 * {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.p40 *, .p50 *, .p60 * {
+	color: rgba(255, 255, 255, 0.6);
+}
+
