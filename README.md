@@ -13,6 +13,8 @@ The app monitors these sensors:
 - Temperature sensor.
 - Ambient light sensor.
 
+### Preview
+
 <div align="center">
   <video src="https://github.com/setghm/Greenhouse-Monitoring-App/assets/53455269/61f4b586-9c69-42a9-b64a-f448f0c6f133"></video>
 </div>
